@@ -1,0 +1,51 @@
+// Задача:
+// В js объявляйте создайте массив с ссылками на картинки. 
+На основе этого массива формируйте множество маленьких 
+картинок в верхней части интерфейса.Пользователь нажимая 
+на маленькие картинки видит их отображение в большем
+ размере(только ту картинку, на которую он нажимал).
+--------------------------------------------------
+const arr = ["https://w.forfun.com/fetch/b7/b704ee0e01f9e6cc673eb875fb1a20b9.jpeg",
+"https://fikiwiki.com/uploads/posts/2022-02/thumbs/1644984077_3-fikiwiki-com-p-kartinki-zhivotnikh-na-avu-3.jpg",
+"https://klike.net/uploads/posts/2019-11/1574514215_2.jpg",
+"https://pibig.info/uploads/posts/2022-07/1657211357_2-pibig-info-p-krasivie-kartinki-na-telefon-babochki-2.jpg"
+];
+
+
+
+const smallImg = document.createElement('div');
+document.body.append(smallImg);
+
+const bigImg = document.createElement('img');
+bigImg.classList.add('big-image');
+document.body.append(bigImg);
+
+for (let i = 0; i < arr.length; i++) {
+  let img = document.createElement('img');
+  img.src = arr[i];
+  img.classList.add('small-image');
+  smallImg.append(img);
+
+  img.onclick = () => {
+    bigImg.src = arr[i];
+    
+  }
+}
+
+-----------------------------------------
+CSS
+
+
+.small-image {
+  width: 100px;
+  height: 150px;
+  
+}
+
+.big-image {
+ width: 400px;
+  height: 550px;
+  
+}
+
+
