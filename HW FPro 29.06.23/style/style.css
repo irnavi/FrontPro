@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.root {
+    padding: 100px 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card {
+    border: 2px solid black;
+    display: flex;
+    
+}
+
+.about {
+    width: 200px;
+    display: block;
+    padding-top: 90px;
+    font-size: 25px;  
+}
+
+.about p {
+    margin: 10px;
+    font-weight: bold;
+  }
